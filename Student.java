@@ -35,9 +35,19 @@ public class Student {
         graduate = false;
     }
 
-    public void toString(Student studentInput){
+    public void setName(String newFirstName, String lastName) {
+        firstName = newFirstName;
+        this.lastName = lastName;
+    }
 
-        System.out.println("The students name is " + studentInput.);
+    public void printToString() {
+
+        System.out.print("The students name is " + firstName + " " + lastName + ", their ID number is " + studentID + ", and their GPA is " + gpa + ".");
+        if(graduate == true) {
+            System.out.println(" They have graduated.");
+        } else {
+            System.out.println(" They have not graduated.");
+        }
     }
 
     public static void main(String[] args){
@@ -48,7 +58,11 @@ public class Student {
 
         Student student3 = new Student("Thor", "Fettke", 690420, 4.2, false);
 
-
+        student1.printToString();
+        student1.setName("John", "Doe");
+        student1.printToString();
+        student2.printToString();
+        student3.printToString();
 
 
     }
