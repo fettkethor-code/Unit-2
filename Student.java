@@ -17,6 +17,7 @@ public class Student {
         studentID = 000000;
         gpa = 0.0;
         graduate = false;
+        numStudents++;
     }
 
     public Student(String fName, String lName, int ID, double GPA, boolean isGraduate) {
@@ -25,6 +26,7 @@ public class Student {
         studentID = ID;
         gpa = GPA;
         graduate = isGraduate;
+        numStudents++;
     }
 
     public Student(String firstName, String lName, int ID, double GPA) {
@@ -33,11 +35,20 @@ public class Student {
         studentID = ID;
         gpa = GPA;
         graduate = false;
+        numStudents++;
     }
 
-    public void setName(String newFirstName, String lastName) {
-        firstName = newFirstName;
+    public void setName(String firstName, String lastName) {
+        this.firstName = firstName;
         this.lastName = lastName;
+    }
+
+    public void setName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public double getGpa() {
+        return (double) this.gpa;
     }
 
     public void printToString() {
@@ -60,10 +71,15 @@ public class Student {
 
         student1.printToString();
         student1.setName("John", "Doe");
+        student1.setName("Jane"); // trans
         student1.printToString();
         student2.printToString();
         student3.printToString();
 
+        System.out.println(student2.getGpa());
 
+        System.out.println("We have " + numStudents + " students enrolled.");
+
+        
     }
 }
