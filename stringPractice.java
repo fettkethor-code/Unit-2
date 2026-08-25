@@ -4,6 +4,28 @@ public class stringPractice {
 
 
     public static void main (String[] args){
+
+
+        int num = 1;
+        double weight = 7.89;
+
+        Integer wrapperI = new Integer(1);
+        Integer wrapperI2 = 2;
+
+        Double wrapperD = new Double(1.1);
+        Double wrapperD2 = 2.2;
+
+        System.out.println(num == wrapperI); // works
+        //System.out.println(num.equals(wrapperI)); // doesnt work, primitive.equals()
+        System.out.println(wrapperI.equals(num)); // works
+
+
+
+
+
+
+
+
         String player1Name = new String("Isaac");
         String player2Name = new String("Stephen");
         String player3Name = new String("Thomas");
